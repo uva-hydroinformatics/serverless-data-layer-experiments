@@ -1,0 +1,14 @@
+# DO NOT include azure-functions-worker in this file
+# The Python Worker is managed by Azure Functions platform
+# Manually managing azure-functions-worker may cause unexpected issues
+
+azure-core
+azure-functions
+azurefunctions-extensions-bindings-eventhub
+azure-storage-blob
+deltalake
+pyarrow
+pandas
+flatten_json
+python-dateutil
+packaging
