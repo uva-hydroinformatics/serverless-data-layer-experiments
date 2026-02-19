@@ -1,14 +1,11 @@
-# Data ingestion app using Azure Event Hubs and Azure Functions
+# Experiment E: Data ingestion app using IoT Central and Azure Functions
 
-This app implements cloud data ingestion through one az function written in python and the Azure IoT Central. Azure IoT Central is connected to TTN and periodically dumps received uplink messages from TTN to a blob storage. The az function is trigerred by new blobs being written in the storage account. The function then reads the raw message blobs, parses it and converts the data to a delta-table format for saving in the data lake. An aditional function is responsible for periodically optimizing the delta table.
+This app implements cloud data ingestion through one Azure function written in python and the Azure IoT Central. Azure IoT Central is connected to TTN and periodically dumps received uplink messages from TTN to a blob storage. The az function is triggered by new blobs being written in the storage account. The function then reads the raw message blobs, parses it and converts the data to a delta-table format, saving in a Delta Lake. An aditional function is required to periodically optimizing the Delta Lake.
 
 # App components
 
-- Data Lake storage account;
+- Delta Lake storage account;
 - Azure IoT Central;
-- AZ Function triggered by new blobs written by IoT Central and ingesting to data lake;
-- Storage account for the AZ Function triggered by new blobs written by IoT Central and ingesting to data lake;
-- App service plan for the AZ Function triggered by new blobs written by IoT Central and ingesting to data lake;
-- Optimize Delta Table Az Function;
-- Storage account for the Optimize Delta Table Az Function;
-- App service plan for the Optimize Delta Table Az Function;
+- AZ Function triggered by new blobs written by IoT Central and ingesting to delta lake;
+- Storage account for the AZ Function triggered by new blobs written by IoT Central and ingesting to delta lake;
+- App service plan for the AZ Function triggered by new blobs written by IoT Central and ingesting to delta lake;
